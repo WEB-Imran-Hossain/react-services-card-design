@@ -2,6 +2,7 @@ import EProductsCard from "./components/EProductsCard";
 import IconHoverEffect from "./components/IconHoverEffect";
 import MultiColorGradientEffect from "./components/MultiColorGradientEffect";
 import OpenCardHoverEffect from "./components/OpenCardHoverEffect";
+import TeamMemberCardEffect from "./components/TeamMemberCardEffect";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <EProductsCard />
       <IconHoverEffect />
       <OpenCardHoverEffect />
+      <TeamMemberCardEffect />
     </div>
   );
 }
