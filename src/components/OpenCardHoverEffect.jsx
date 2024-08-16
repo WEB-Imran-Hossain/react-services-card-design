@@ -71,34 +71,49 @@ const OpenCardHoverEffect = () => {
               "https://i.ibb.co/ZmKVTCN/nordwood-themes-ub-IWo074-Ql-U-unsplash.jpg",
           },
       ];
+
+
+      
       return (
-        <div className='my-20'>
-             <h1 className='text-3xl font-bold my-10 text-center'>Open Drawer Hover Effect</h1>
-            <div className="flex flex-wrap gap-4 justify-center p-8 ">
-            {cardsData.map(card => (
-                <div key={card.id} className="relative w-96 h-96 overflow-hidden group cursor-pointer">
-                    {/* Overlay for user icon */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-blue-700 transition-transform duration-500 transform translate-y-12 group-hover:translate-y-0">
-                    </div>
-
-                    {/* Main card content */}
-                    <div className="absolute inset-0 flex items-center justify-center p-5 bg-white shadow-lg transition-transform duration-500 transform group-hover:-translate-y-44">
-                        <div className="text-center">
-                            <h3 className="text-2xl text-gray-800">{card.title}</h3>
-                            <p className="text-gray-600">{card.description}</p>
-                        </div>
-                    </div>
-
-                    {/* Image */}
-                    <img src={card.imageUrl} alt={card.overlayText} className="absolute inset-0 object-cover w-full h-full opacity-30 transition-opacity duration-500 group-hover:opacity-100" />
-
-                    {/* Bottom highlight */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-700 w-8 h-1"></div>
+        <div className="my-20">
+          <h1 className="text-3xl font-bold my-10 text-center">
+            Open Drawer Hover Effect
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-[80vw] mx-auto">
+            {cardsData.map((card) => (
+              <div
+                key={card.id}
+                className="relative w-full h-72 overflow-hidden group cursor-pointer"
+              >
+                {/* Overlay for user icon */}
+                <div className="absolute inset-0 flex items-center justify-center bg-blue-700 transition-transform duration-500 transform translate-y-12 group-hover:translate-y-0"></div>
+      
+                {/* Main card content */}
+                <div className="absolute inset-0 flex items-center justify-center p-5 bg-white shadow-lg transition-transform duration-500 transform group-hover:-translate-y-32 sm:group-hover:-translate-y-36 md:group-hover:-translate-y-44">
+                  <div className="text-center">
+                    <h3 className="text-lg sm:text-xl md:text-2xl text-gray-800">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm sm:text-base md:text-gray-600">
+                      {card.description}
+                    </p>
+                  </div>
                 </div>
+      
+                {/* Image */}
+                <img
+                  src={card.imageUrl}
+                  alt={card.overlayText}
+                  className="absolute inset-0 object-cover w-full h-full opacity-30 transition-opacity duration-500 group-hover:opacity-100"
+                />
+      
+                {/* Bottom highlight */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-700 w-6 sm:w-7 md:w-8 h-1"></div>
+              </div>
             ))}
+          </div>
         </div>
-        </div>
-    );
+      );
 };
 
 export default OpenCardHoverEffect;

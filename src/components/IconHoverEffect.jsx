@@ -79,7 +79,7 @@ const IconHoverEffect = () => {
             Icon Hover Effect
           </h1>
           <div className="flex justify-center py-12">
-            <div className="relative overflow-hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-[80vw]">
+            <div className="relative overflow-hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-[80vw]">
               {cardsData.map((card) => (
                 <div
                   key={card?.id}
