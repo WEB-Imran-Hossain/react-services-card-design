@@ -1,3 +1,4 @@
+import BackGroundHovereffect from "./components/BackGroundHovereffect";
 import EProductsCard from "./components/EProductsCard";
 import IconHoverEffect from "./components/IconHoverEffect";
 import MultiColorGradientEffect from "./components/MultiColorGradientEffect";
@@ -13,6 +14,7 @@ function App() {
       <IconHoverEffect />
       <OpenCardHoverEffect />
       <TeamMemberCardEffect />
+      <BackGroundHovereffect />
     </div>
   );
 }
